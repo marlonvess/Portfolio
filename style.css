@@ -1,0 +1,172 @@
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root{
+     /* Colors */
+  --primary-color: #2f27ce;
+  --secondary-color: #dedcff;
+  --accent-color: #433bff;
+  --bg-color: #fbfbfe;
+  --surface-color: #ffffff;
+  --white-color: #ffffff;
+  --text-color: #050315;
+  --muted-text-color: #6b6a89;
+  --border-color:  #c7c7e0;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(45deg, #318eb3, #006e9a);
+  --gradient-light: linear-gradient(90deg, #fff, #ddd);
+
+  /* Typography */
+  --font-main: 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 1rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  --line-height: 1.6;
+
+  /* Spacing (you can use multiples of 0.5rem) */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --space-xl: 4rem;
+
+  /* Border & Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-default: 1px solid var(--border-color);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+
+  /*  Transitions */
+  --transition-fast: 0.2s ease-in-out;
+  --transition-normal: 0.4s ease-in-out;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#menu {
+    padding:5px;
+    display: flex;
+    justify-content: center;
+}
+
+#header {
+    display: flex;
+    align-content: center;
+    background-color: #006e9a;
+    padding: 15px;
+    width: 80%;
+    align-self: center;
+    margin: auto;
+}
+
+#iconContainer {
+    display: flex;
+}
+
+#photoContainer{
+    left: 100%;
+}
+
+#aboutMeText h1 {
+background-color: lightblue;
+text-align: center;
+}
+
+#aboutMeContainer {
+    background-color: green;
+    margin: auto;
+    width: 80%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#history{
+    padding: 15px;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    background-color: red;
+    width: 50%;
+} 
+
+#history h3 {
+    background-color: gray;
+    padding: 10px;
+}
+#techStackContainer{
+    background-color: yellow;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+#techStackContainer h3 {
+    background-color: gray;
+    padding: 10px;
+}
+#techStackItems {
+    background-color: purple;
+    width: 40%;
+    justify-content: flex-start;
+}

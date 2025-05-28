@@ -70,7 +70,7 @@ h1, h2, h3, h4, h5, h6 {
   --gradient-light: linear-gradient(90deg, #fff, #ddd);
 
   /* Typography */
-  --font-main: 'Segoe UI', Roboto, sans-serif;
+  --font-main: 'Courier New', Courier, monospace;
   --font-size-base: 1rem;
   --font-size-sm: 0.875rem;
   --font-size-lg: 1.25rem;
@@ -101,7 +101,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color: var(--bg-color);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-main)
 }
 
 #menu {
@@ -110,59 +110,90 @@ body {
     justify-content: center;
 }
 
+#menu a {
+    text-decoration: none;
+    color: #050315;
+}
+
+#menu a:link {
+  text-decoration: none;
+}
+
+#menu a:visited {
+  text-decoration: none;
+}
+
+ #menu a:hover {
+  text-decoration: none;
+}
+
+#menu a:active {
+  text-decoration: none;
+}
+
 #header {
     display: flex;
-    background-color: #006e9a;
     padding: 15px;
     width: 80%;
     margin: auto;
+    margin-bottom: 15rem;
 }
 
 #nameContainer {
 width: 33%;
 display: flex;
+justify-content: center;
+align-items: center;
+padding-right: 15%;
 }
 
 #photoContainer img {
   width: 200px;
   height: 200px;
   float: right;
-  background-color: pink;
 }
 
 #iconContainer {
     display: flex;
     flex-direction: row;
-    background-color: red;
     width: 33%;
+    height: 150px;
+    align-self: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .icon-box {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem; 
+  display: flex;
+  align-items:center;
+  gap: 20px;
 }
-#photoContainer{
+
+.icon-box img {
+  width: 30px;
+  height: 30px;
+}
+
+#photoContainer {
   padding: 10px;
   margin: auto;
-  background-color: navy;
   width: 33%;
 }
 
 #aboutMeText h1 {
-background-color: lightblue;
 text-align: center;
 margin: auto;
 width: 80%;
 }
 
 #aboutMeContainer {
-    background-color: green;
     margin: auto;
     width: 80%;
+    height: 1080px;
     padding: 15px;
     display: flex;
     align-items: center;
+    background-color: #006e9a;
 }
 
 #history{
@@ -170,18 +201,15 @@ width: 80%;
     display: flex;
     align-content: space-between;
     flex-direction: column;
-    background-color: red;
     width: 80%;
     height: 280px;
 } 
 
 #history h3 {
-    background-color: gray;
     padding: 10px;
 }
 
 #historyText {
-    background-color: purple;
     width: 80%;
     height: 200px;
     justify-content: flex-start;
@@ -191,48 +219,58 @@ width: 80%;
 }
 
 #techStackContainer{
+  background-color: red;
     padding: 15px;
     display: flex;
     align-content: space-between;
     flex-direction: column;
-    background-color: red;
     width: 80%;
     height: 280px;
 }
 #techStackContainer h3 {
-    background-color: gray;
     padding: 10px;
+    background-color: #006e9a;
 }
 #techStackItems {
-    background-color: purple;
     width: 40%;
     justify-content: flex-start;
     display: flex;
     flex-direction: row;
     align-self: center;
+    background-color: #389167;
 }
 
 #contact {
-    background-color: fuchsia;
     width: 80%;
     margin: auto;
     padding: 30px;
     display:flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+#contactContainer h3 {
+  text-align: center;
 }
 
 #contact div {
-    background-color: rgb(0, 255, 157);
     width: 80%;
     margin: auto;
     padding: 30px;
     display:flex;
-    flex-direction:row;
+}
+
+#contactContainer form {
+  width: 60%;
+  
+}
+
+#contact .contactText {
+  text-align: right;
 }
 
 #footer {
-    background-color: orange;
     padding: 20px;
     text-align: center;
     width: 80%;
